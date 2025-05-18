@@ -21,13 +21,13 @@ const HelpCenter = () => {
 
         <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">1. How do I report an issue?</h2>
         <p className="mb-4">
-          Simply click the <Link to="/report" className="text-urban-primary hover:underline transition">Report Issue</Link> button in the navigation menu. Fill in the
+          Simply click the <strong>"Report Issue"</strong> button in the navigation menu. Fill in the
           details such as issue category, photo, location, and an optional description, then submit.
         </p>
 
         <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">2. How can I track my reports?</h2>
         <p className="mb-4">
-          Visit the <Link to="/reports" className="text-urban-primary hover:underline transition">My Reports</Link> section to view the status of all issues you’ve reported.
+          Visit the <strong>"My Reports"</strong> section to view the status of all issues you’ve reported.
         </p>
 
 
