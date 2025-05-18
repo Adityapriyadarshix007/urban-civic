@@ -8,6 +8,7 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    allowedHosts: ["urban-civic-1.onrender.com"], // ✅ Added this line
   },
   plugins: [
     react(),
