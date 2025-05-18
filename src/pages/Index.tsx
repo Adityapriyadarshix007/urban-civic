@@ -97,13 +97,13 @@ const Index = () => {
         <section className="py-16 md:py-24 px-6 border-y border-border/60">
           <div className="container mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              <StatCard value="15,000+" label="Issues Reported" />
-              <StatCard value="85%" label="Resolution Rate" />
-              <StatCard value="48hrs" label="Average Response Time" />
-              <StatCard value="10k+" label="Active Users" />
+              <StatCard value={<CountUpNumber target={15000} suffix="+" />} label="Issues Reported" />
+              <StatCard value={<CountUpNumber target={85} suffix="%" />} label="Resolution Rate" />
+              <StatCard value={<CountUpNumber target={48} suffix="hrs" />} label="Average Response Time" />
+              <StatCard value={<CountUpNumber target={10000} suffix="+" />} label="Active Users" />
             </div>
           </div>
-        </section>
+      </section>
 
         {/* CTA Section */}
         <section className="py-16 md:py-24 px-6">
@@ -169,14 +169,15 @@ function FeatureCard({ icon, title, description }: FeatureCardProps) {
 }
 
 interface StatCardProps {
-  value: string;
+  value: React.ReactNode; // allow JSX (for CountUpNumber)
   label: string;
+  className?: string;
 }
 
-function StatCard({ value, label }: StatCardProps) {
+function StatCard({ value, label, className = "" }: StatCardProps) {
   return (
-    <div className="text-center p-6">
-      <div className="text-4xl font-bold text-urban-primary">{value}</div>
+    <div className={`text-center p-6 ${className}`}>
+      <div className="text-4xl font-bold text-urban-primary shining">{value}</div>
       <div className="mt-2 text-muted-foreground">{label}</div>
     </div>
   );
