@@ -151,4 +151,25 @@
   .font-handwritten {
     font-family: 'Caveat', cursive;
   }
+
+  .shining {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa, #3b82f6);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite;
+  font-weight: bold;
+  font-size: 2rem; /* optional size styling */
+  }
+
+  @keyframes shine {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
 }
